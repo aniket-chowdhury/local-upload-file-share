@@ -10,7 +10,7 @@ const app = express()
 
 app.use(cors())
 
-const ips = ['::ffff:127.0.0.1', '::ffff:0.0.0.0']
+const ips = ['::ffff:127.0.0.1']
 app.use(ipfilter(ips, { mode: 'allow', log: false }))
 
 app.use((err, req, res, _next) => {
